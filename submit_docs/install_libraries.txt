@@ -1,0 +1,36 @@
+# =====================================================================
+# LỆNH CÀI ĐẶT THƯ VIỆN DỰ ÁN: HoangXuanLuan23IT150-DaNenTang2026
+# MÔN HỌC: Lập Trình Đa Nền Tảng (Flutter + Node.js + MongoDB)
+# =====================================================================
+
+# 1. CÀI ĐẶT THƯ VIỆN CHO BACKEND (Node.js & Express & MongoDB)
+cd backend
+npm install
+# Hoặc cài đặt thủ công từng thư viện:
+# npm install express mongoose cors multer dotenv jsonwebtoken bcryptjs
+# npm install --save-dev nodemon
+
+# 2. CÀI ĐẶT THƯ VIỆN CHO FRONTEND (Flutter Web & Android)
+cd ../frontend
+flutter pub get
+# Hoặc thêm thủ công từng gói:
+# flutter pub add http image_picker intl
+
+# =====================================================================
+# LỆNH KHỞI CHẠY HỆ THỐNG
+# =====================================================================
+
+# Khởi chạy Backend API:
+cd backend
+npm start
+
+# Chạy kiểm thử tự động Backend:
+npm test
+
+# Khởi chạy Flutter trên Web (Google Chrome):
+cd frontend
+flutter run -d chrome
+
+# Khởi chạy Flutter trên thiết bị di động Android:
+cd frontend
+flutter run

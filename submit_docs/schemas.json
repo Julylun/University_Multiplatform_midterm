@@ -1,0 +1,65 @@
+[
+  {
+    "collection": "GiangVien",
+    "options": {
+      "validator": {
+        "$jsonSchema": {
+          "bsonType": "object",
+          "required": [
+            "IDGV",
+            "Fullname",
+            "Image",
+            "SumClass"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "_id": {
+              "bsonType": "objectId",
+              "description": "Mã định danh nội bộ MongoDB (tự sinh)"
+            },
+            "IDGV": {
+              "bsonType": "string",
+              "description": "Mã Giảng viên - Bắt buộc là chuỗi ký tự"
+            },
+            "Fullname": {
+              "bsonType": "string",
+              "description": "Họ và tên - Bắt buộc là chuỗi ký tự"
+            },
+            "Image": {
+              "bsonType": "string",
+              "description": "Đường dẫn/URL hình ảnh - Bắt buộc là chuỗi ký tự"
+            },
+            "SumClass": {
+              "bsonType": [
+                "int",
+                "number",
+                "long"
+              ],
+              "minimum": 0,
+              "description": "Tổng số lớp - Bắt buộc là số nguyên >= 0"
+            }
+          }
+        }
+      },
+      "validationLevel": "strict",
+      "validationAction": "error"
+    },
+    "indexes": [
+      {
+        "v": 2,
+        "key": {
+          "_id": 1
+        },
+        "name": "_id_"
+      },
+      {
+        "v": 2,
+        "key": {
+          "IDGV": 1
+        },
+        "name": "IDGV_1",
+        "unique": true
+      }
+    ]
+  }
+]
